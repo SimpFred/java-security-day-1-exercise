@@ -1,8 +1,11 @@
 package com.booleanuk.api.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.util.List;
 
 @Data
 @NoArgsConstructor
@@ -29,5 +32,9 @@ public class Game {
         this.ageRating = ageRating;
         this.numberOfPlayers = numberOfPlayers;
         this.genre = genre;
+    }
+
+    public Game(int id) {
+        this.id = id;
     }
 }
